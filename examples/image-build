@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PROJECT_DIR=${1:-"."}
+IMAGE_BUILDER=${2:-"docker"}
+docker run -it -v ${PROJECT_DIR}:/mnt/project -w /mnt/project --rm iocanel/quarkus-cli:v3.4.3 image build $IMAGE_BUILDER

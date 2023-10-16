@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PROJECT_DIR=${1:-"."}
+docker run -it -v ${PROJECT_DIR}:/mnt/project -w /mnt/project --rm iocanel/quarkus-cli:v3.4.3 build

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+APP_NAME=${1:-"hello-world"}
+mkdir -p ~/.quarkus/cli/projects
+docker run -it -v ~/.quarkus/cli/projects:/mnt/projects -w /mnt/projects --rm iocanel/quarkus-cli:v3.4.3 create app $APP_NAME
